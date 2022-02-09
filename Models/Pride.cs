@@ -10,18 +10,15 @@ namespace Shop.Models
     public class Pride
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "ID je obavezan")]
-        public string Name { get; set; }
         [Required(ErrorMessage = "Ime je obavezno")]
-        [Column(TypeName = "decimal(18,2)")]
+        public string Name { get; set; }
 
-        public int Size { get; set; }
         [Required(ErrorMessage = "Veličina je obavezan")]
-        public decimal Price { get; set; }
+        public int Size { get; set; }
         [Required(ErrorMessage = "Cijena je obavezna")]
-
-        public string Code { get; set; }
-        public string Slug => Name == null ? "" : Name.Replace(' ', '-');
+        public decimal Price { get; set; }
 
     }
+
+    
 }

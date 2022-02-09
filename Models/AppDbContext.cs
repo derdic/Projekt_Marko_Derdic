@@ -13,19 +13,8 @@ namespace Shop.Models
 
         }
 
-        public DbSet<Adidas> Adidass { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            builder.Entity<Adidas>().HasData(
-                new Adidas
-                {
-                    Id = 1,
-                    Name = "Boksačke rukavice",
-                    Size = "10oz",
-                    Price = 705
-                });
-        }
+        public DbSet<Adidas> AdidasP { get; set; }
+        public DbSet<Pride> PrideP { get; set; }
 
     }
 }
