@@ -1,0 +1,29 @@
+﻿@model Pride
+@{ ViewBag.Title = "Proizvodi Pride"; }
+
+<h1>Detalji o proizvodu</h1>
+<br />
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="~/images/@ViewBag.ImageFileName" alt="@Model.Name" class="img-responsive center-block" />
+    </div>
+
+    <div class="col-sm-8">
+        <h2>@Model.Name</h2>
+        <h4>Kategorija: @ViewBag.CategoryName</h4>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>Cijena:</td>
+                <td>@Model.Price.ToString("c")</td>
+            </tr>
+            <tr>
+                <td>Veličina:</td>
+                <td>@Model.Size.ToString("c")</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary">Početna</a>
